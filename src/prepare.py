@@ -6,7 +6,7 @@ from classopt import classopt
 from more_itertools import divide, flatten
 from tqdm import tqdm
 
-import src.utils as utils
+import utils
 
 
 @classopt(default_long=True)

@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "bert-classification-tutorial"
+name = "bert-classification-test"
 version = "0.1.0"
 description = ""
 authors = ["hppRC <hpp.ricecake@gmail.com>"]

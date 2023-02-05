@@ -15,7 +15,7 @@ from transformers.modeling_outputs import SequenceClassifierOutput
 from transformers.optimization import get_linear_schedule_with_warmup
 from transformers.tokenization_utils import BatchEncoding, PreTrainedTokenizer
 
-import src.utils as utils
+import utils
 
 
 @classopt(default_long=True)
@@ -174,7 +174,8 @@ def main(args: Args):
         model.eval()
         val_metrics = {"epoch": epoch, **evaluate(val_dataloader)}
         log(val_metrics)
-
+        
+        # best epoch 情報更新
         if val_metrics["f1"] > best_val_f1:
             best_val_f1 = val_metrics["f1"]
             best_epoch = epoch
